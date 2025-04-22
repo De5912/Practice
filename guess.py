@@ -1,4 +1,7 @@
- attempts = 0  # Initialize the attempt counter
+import random
+number_to_guess = random.randint(1,100)
+
+attempts = 0  # Initialize the attempt counter
  max_attempts = 7  # Set the maximum number of attempts
 
  while attempts < max_attempts:
@@ -13,7 +16,15 @@
          else:
              print(f"🎉 You guessed it in {attempts} attempts!")
              break
-     except ValueError:
+         if attempts == 3:
+             if number_to_guess % 2 == 0:
+                 print("Hint: The number is even!")
+             else:
+                 pritn("Hint: The number is odd!")
+
+
+
+       except ValueError:
          print("Invalid input. Please enter a number.")
 
  if attempts == max_attempts and guess != number_to_guess:
