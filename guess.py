@@ -25,7 +25,7 @@ attempts = 0  # Initialize the attempt counter
 
 
        except ValueError:
-         print("Invalid input. Please enter a number.")
+         print("Invalid input. Please enter a number..........")
 
  if attempts == max_attempts and guess != number_to_guess:
      print(f"❌ You've used all {max_attempts} attempts. The number was {number_to_guess}.")
